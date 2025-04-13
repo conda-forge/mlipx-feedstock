@@ -20,7 +20,7 @@ build:
 requirements:
   host:
     - python {{ python_min }}
-    - poetry-core
+    - hatchling
     - pip
   run:
     - dvc-s3 >=3.2.0
