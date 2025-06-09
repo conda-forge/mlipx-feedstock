@@ -1,5 +1,5 @@
 {% set name = "mlipx" %}
-{% set version = "0.1.4" %}
+{% set version = "0.1.5" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/mlipx-{{ version }}.tar.gz
-  sha256: f5b6b8a244fe62c23c347f42383b017f5d90769ff89d40569a6639c2ab43d0a8
+  sha256: 1a0dbe96a7d0b85f40a0ac8f5f8d9eb163e6e32983114f0030106c2f539f3895
 
 build:
   entry_points:
@@ -23,6 +23,7 @@ requirements:
     - hatchling
     - pip
   run:
+    - pydantic >=2.10.6
     - dvc-s3 >=3.2.0
     - mp-api >=0.45.3
     - mpcontribs-client >=5.10.2
